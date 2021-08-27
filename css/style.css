@@ -15,24 +15,119 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 */
 
 /* VARIÁVEIS */
-:root{
-  
+:root {
+	--background-color: #00002e;
+	--font-color: #fff;  
 }
 
 /*BODY*/
-	body{
-
-	}
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	background-color: var(--background-color);
+}
 
 /*TOPO*/
-	header.topo{
-		
-	}
+header.topo {
+	display: flex;
+	justify-content: flex-start; 
+}
+
+figcaption {
+	display: none;
+}
 
 /*RODAPÉ*/
-	
+footer {
+	display: flex;
+	justify-content: center;
+	margin: 20px;
+}
+
+button {
+	background-color: var(--background-color);
+	padding: 18px;
+	color: var(--font-color);
+	border-color: var(--font-color);
+	font-size: 17px;
+	margin-top: 5%;
+	cursor: pointer;
+}	
 
 /*PÁGINA INICIAL*/
-	div.pg-home{
-		
+div.pg-home {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+div header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--font-color);
+	font-size: 2.8em;
+	font-weight: bold;
+	margin: 40px 0 60px 0;
+}
+
+div ul {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+	justify-content: center;
+	width: 858px;
+}
+
+div ul li {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: auto;
+}
+
+div ul li img {
+	width: 186px;
+	cursor: pointer;	
+}
+
+div ul li img:hover {
+	border: 1px solid var(--font-color);
+}
+
+div ul li h3 {
+	color: var(--font-color);
+	text-align: center;
+	margin-top: 20px;
+	font-size: 1.2em;
+}
+
+/* MOBILE */
+@media screen and (max-width: 840px){
+	header.topo{
+		justify-content: center;
+	}
+
+	div header {
+		text-align: center;
+	}
+
+	div section {
+		justify-content: center;
+	}
+
+	div ul{
+		display: flex;
+		flex-wrap: wrap;
+		width: 420px;
+		margin: 0 auto;
+	}
+
+	div ul li h3 {
+		margin-bottom: 20%;
+	}
+
+@media screen and (max-width: 400px){
+	div ul{
+		display: flex;
+		flex-wrap: wrap;
+		width: 280px;
 	}
